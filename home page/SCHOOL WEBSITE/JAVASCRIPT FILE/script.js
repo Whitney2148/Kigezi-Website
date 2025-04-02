@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded",function(){
+    fetch("header.html")
+    .then(Response=>Response.text())
+    .then(data=>document.body.insertAdjacentHTML("afterbegin",data));
+})
 let slideIndex = 0;
 function showSlides() {
     let slides = document.getElementsByClassName("slide");

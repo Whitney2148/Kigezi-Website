@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded",function() {
+    fetch("header.html")
+    .then(Response=>Response.text())
+    .then(data=>Document.body.insertAdjacentHTML("afterbegin",data));
+    fetch("footer.html")
+    .then(Response=>Response.text())
+    .then(data=Document.body.insertAdjacentHTML("beforeend",data));
+})
 function validateForm( ){
     const name=
     document.getElementById('name').value;
